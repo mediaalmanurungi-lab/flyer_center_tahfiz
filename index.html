@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Flyer Pusat MIS Sengkang — generator flyer simaan santri (manual &amp; AI).">
+    <meta name="theme-color" content="#070a12">
+    <title>Flyer Pusat - MIS Sengkang Engine</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9C%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+    <div class="ambient-glow" id="glow-core"></div>
+
+    <div class="app-container">
+
+        <!-- ================= LOGIN / LANDING ================= -->
+        <section id="login-view">
+            <div class="login-card">
+                <h2>Flyer Pusat Engine</h2>
+                <h1>MIS SENGKANG</h1>
+                <button class="btn-cyber" id="btn-enter" type="button">ENTER SYSTEM</button>
+            </div>
+        </section>
+
+        <!-- ================= DASHBOARD ================= -->
+        <section id="dashboard-view" hidden>
+
+            <header class="header-panel">
+                <h2>FLYER HUB CONTROL CENTER</h2>
+                <span id="engine-status" class="engine-status" aria-live="polite">⚙️ MANUAL ENGINE ACTIVE</span>
+            </header>
+
+            <!-- ---------- PANEL KONTROL ---------- -->
+            <div class="control-panel">
+
+                <div class="tab-gate-container" role="tablist">
+                    <button type="button" class="btn-gate active-gate-manual" id="gate-manual-btn" role="tab" aria-selected="true">🛠️ MANUAL FLYER</button>
+                    <button type="button" class="btn-gate" id="gate-ai-btn" role="tab" aria-selected="false">🤖 AI CUSTOM ENGINE</button>
+                </div>
+
+                <!-- ===== MANUAL ===== -->
+                <div id="form-gate-manual" class="form-gate">
+                    <div class="input-group">
+                        <label for="input-santri">Database Santri (Search Hub) <span class="count-pill" id="santri-count"></span></label>
+                        <input type="text" class="input-cyber" id="input-santri" list="data-santri-list" placeholder="Ketik &amp; cari nama santri..." autocomplete="off" autocapitalize="words">
+                        <datalist id="data-santri-list"></datalist>
+                        <small class="hint" id="santri-hint"></small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="input-juz">Pilih Tingkatan &amp; Jenis Flyer</label>
+                        <select class="input-cyber" id="input-juz">
+                            <option value="Simaan 1 Juz">SIMAAN 1 JUZ (Tier Standar)</option>
+                            <option value="Simaan 5 Juz">SIMAAN 5 JUZ (Tier Standar)</option>
+                            <option value="Simaan 10 Juz">SIMAAN 10 JUZ (Tier Premium)</option>
+                            <option value="Simaan 20 Juz">SIMAAN 20 JUZ (Tier Premium)</option>
+                            <option value="Simaan 30 Juz">SIMAAN 30 JUZ (Tier Royal Gold)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="input-nama-juz">Detail Nama Juz / Surah</label>
+                        <input type="text" class="input-cyber" id="input-nama-juz" placeholder="Contoh: Juz 30 / Al-Baqarah" autocomplete="off">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="input-total-hafalan">Total Hafalan</label>
+                        <input type="text" class="input-cyber" id="input-total-hafalan" placeholder="Contoh: 1-30 Juz" autocomplete="off">
+                    </div>
+
+                    <details class="calib">
+                        <summary>🎯 Atur posisi elemen (opsional)</summary>
+                        <p class="hint">Geser per elemen jika template baru kurang pas. Satuan: poin pada kanvas 400×500. Tersimpan otomatis di browser ini.</p>
+                        <div class="calib-grid" id="calib-grid"></div>
+                        <button type="button" class="btn-ghost" id="btn-calib-reset">↺ Reset posisi</button>
+                    </details>
+                </div>
+
+                <!-- ===== AI ===== -->
+                <div id="form-gate-ai" class="form-gate" hidden>
+                    <div class="ai-box">
+                        <label class="ai-title">🤖 AI CUSTOM DESIGN PLATFORM</label>
+
+                        <div class="input-group">
+                            <label for="ai-flyer-name">Nama / Tema Flyer Baru</label>
+                            <input type="text" class="input-cyber" id="ai-flyer-name" placeholder="Contoh: Flyer Hari Santri / Simaan Akbar" autocomplete="off">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="ai-santri">Santri (opsional, untuk foto &amp; nama)</label>
+                            <input type="text" class="input-cyber" id="ai-santri" list="data-santri-list" placeholder="Ketik &amp; cari nama santri..." autocomplete="off" autocapitalize="words">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="ai-custom-prompt-data">Input Data Santri &amp; Keterangan untuk Prompt</label>
+                            <textarea class="input-cyber" id="ai-custom-prompt-data" rows="4" placeholder="Ketik data di sini (Nama, Asal, Nama Orang Tua, Kategori Simaan, dsb.) agar otomatis digenerate ke dalam instruksi Prompt AI..."></textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="ai-flyer-upload">Upload Gambar Latar / Poster (Opsional)</label>
+                            <input type="file" class="input-cyber" id="ai-flyer-upload" accept="image/*">
+                            <small class="hint" id="ai-upload-hint"></small>
+                        </div>
+
+                        <button type="button" class="btn-ai" id="btn-gen-prompt">🔮 GENERATE AUTOMATIC LAYOUT PROMPT</button>
+
+                        <div class="input-group" id="ai-prompt-out-wrap" hidden>
+                            <label for="ai-prompt-out">Prompt siap pakai (salin ke Gemini / ChatGPT / dsb.)</label>
+                            <textarea class="input-cyber" id="ai-prompt-out" rows="9" readonly></textarea>
+                            <button type="button" class="btn-ghost" id="btn-copy-prompt">📋 Salin Prompt</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ---------- PRATINJAU & AKSI ---------- -->
+            <div class="preview-panel">
+                <div class="flyer-stage" id="flyer-stage">
+                    <canvas id="flyer-canvas" width="1080" height="1350" role="img" aria-label="Pratinjau flyer"></canvas>
+                    <div class="stage-status" id="stage-status" hidden></div>
+                </div>
+
+                <div class="action-area">
+                    <div class="export-opts">
+                        <label>Format
+                            <select id="export-format" class="input-mini">
+                                <option value="png">PNG (terjernih)</option>
+                                <option value="jpeg">JPG (lebih ringan)</option>
+                            </select>
+                        </label>
+                        <label>Ukuran
+                            <select id="export-size" class="input-mini">
+                                <option value="auto">Otomatis (terbaik)</option>
+                                <option value="1080">1080 × 1350</option>
+                                <option value="1620">1620 × 2025</option>
+                                <option value="2160">2160 × 2700</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <button type="button" id="btn-download" class="btn-action btn-download">📥 DOWNLOAD FLYER</button>
+
+                    <div class="action-grid">
+                        <button type="button" id="btn-wa" class="btn-wa">🟢 Share ke WA</button>
+                        <button type="button" id="btn-copy-caption" class="btn-ghost">📋 Salin Caption</button>
+                    </div>
+                    <button type="button" id="btn-open-image" class="link-btn">Tidak terunduh? Buka gambar lalu tahan lama untuk menyimpan</button>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Modal pratinjau gambar (cadangan untuk browser yang memblokir download) -->
+    <div class="modal" id="img-modal" hidden>
+        <div class="modal-card">
+            <p><b>Tahan lama / klik kanan</b> pada gambar, lalu pilih <b>Simpan Gambar</b>.</p>
+            <img id="modal-img" alt="Hasil flyer">
+            <button type="button" class="btn-ghost" id="btn-modal-close">Tutup</button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="data.js?v=2"></script>
+    <script src="app.js?v=2"></script>
+</body>
+</html>
