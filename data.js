@@ -57,7 +57,7 @@ const DATA_SANTRI = [
   { nama: "M. Khoirul Kahfi Ikhsani", alamat: "Morowali", ayah: "Ikhsan Jaya, S.Pd.", ibu: "Widya Ningsih, HM", halaqah: "Abu Ubaidah", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1791349030/IRUL_tj2cru.png" },
   { nama: "Muh Akhyar Hafidz", alamat: "Enrekang", ayah: "Muhammad Syahruddin", ibu: "Jumriati", halaqah: "Usamah bin Zaid", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1791345615/AKHYAR_f9ro7i.png" },
   { nama: "Muh Alby Saputra", alamat: "Sengkang", ayah: "Iqbal Saputra", ibu: "Isennag", halaqah: "Utsman bin Affan", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1787800611/ALBHY_ioeqio.png" },
-  { nama: "Muh Faris Musyari Awwab", alamat: "Gowa", ayah: "Kaharuddin", ibu: "Gusni Paramitasari", halaqah: "Abu Darda", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1787710796/JAYA_1_xonz5s.png" },
+  { nama: "Muh Faris Musyari Awwab", alamat: "Sengkang", ayah: "Kaharuddin", ibu: "Gusni Paramitasari", halaqah: "Abu Darda", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1787710796/JAYA_1_xonz5s.png" },
   { nama: "Muh. Afief Zhafran", alamat: "Wajo", ayah: "Riswanto", ibu: "Haslinda, Amd. Kep.", halaqah: "Usamah bin Zaid", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1791345290/AFIF_lj3vdn.png" },
   { nama: "Muh. Aqila Rahman", alamat: "Poso", ayah: "Paizin", ibu: "Fitri Rahmawati", halaqah: "Usamah bin Zaid", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1793621573/FAIREL_3_zf01co.png" },
   { nama: "Muh. Areza Hajri", alamat: "Sengkang", ayah: "Ecang", ibu: "Nurlia", halaqah: "Abu Bakar As-siddiq", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1787714422/ZHAFRAN_1_we00bj.png" },
