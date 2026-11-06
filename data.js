@@ -24,7 +24,7 @@ const DATA_SANTRI = [
   { nama: "Alghifari Raffasya", alamat: "Makassar", ayah: "Usman", ibu: "Masada", halaqah: "Umar bin Khattab", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1791349317/RASYA_d4azcz.png" },
   { nama: "Andi Ammar Dzaki Putra Dzaldah", alamat: "Sengkang", ayah: "A. Ahmad Faisal, S.T.", ibu: "Haslindah, A.Ma.Pd.", halaqah: "Abu Bakar As-siddiq", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/q_auto/f_auto/v1781491973/ANDI_AMMAR_doj8g8.png" },
   { nama: "Andi Hilmy Nur Qairi", alamat: "Sengkang", ayah: "Budiono", ibu: "Suriati", halaqah: "Abu Darda", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1787748254/HILMI_pfq4mm.png" },
-  { nama: "Andi Milan Al-Fajri", alamat: "Sengkang", ayah: "Andi Alifandi Gustaf, SP.", ibu: "Asniar Samin, S.ST.", halaqah: "Ali bin Abi Tholib", foto: "" },
+  { nama: "Andi Milan Al-Fajri", alamat: "Sengkang", ayah: "Andi Alifandi Gustaf, SP.", ibu: "Asniar Samin, S.ST.", halaqah: "Ali bin Abi Tholib", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1794002232/milan_2_jh7itq.png" },
   { nama: "Andi Muh. Anugrah", alamat: "Sengkang", ayah: "Andi Suharsidi, A.Md.", ibu: "Ernawati S.", halaqah: "Abdullah bin Mas`ud", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1787746148/ANUGRAH_icpijm.png" },
   { nama: "Andi Muhammad Arif Ramadhan", alamat: "Sengkang", ayah: "Abd. Jalil", ibu: "Andi Wahyuni Sartika", halaqah: "Umar bin Khattab", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1791349185/B_w7odum.png" },
   { nama: "Andi Muhammad Fatih Akbar", alamat: "Sengkang", ayah: "Andi Akbar, B. S.Sos.", ibu: "ST. Rahmah", halaqah: "Abu Ubaidah", foto: "https://res.cloudinary.com/dnemkpcdx/image/upload/v1793616951/FATIH_px3l80.png" },
